@@ -4,143 +4,400 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INSAFEI | Consultoría Integral</title>
-    <!-- Google Fonts para una tipografía elegante -->
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-    
+
     <style>
-        /* Variables de color para fácil edición */
-        :root {
-            --primario: #1a365d; /* Azul oscuro empresarial */
-            --secundario: #2b6cb0;
-            --acento: #63b3ed;
-            --texto: #2d3748;
-            --blanco: #ffffff;
-            --gris-claro: #f7fafc;
+
+        :root{
+            --azul:#0f172a;
+            --azul2:#1e3a8a;
+            --celeste:#60a5fa;
+            --blanco:#ffffff;
+            --gris:#f8fafc;
+            --texto:#1e293b;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--texto);
-            background-color: var(--blanco);
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            scroll-behavior:smooth;
         }
 
-        /* Navegación */
-        nav {
-            background: var(--primario);
-            color: var(--blanco);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        body{
+            font-family:'Inter', sans-serif;
+            color:var(--texto);
+            background:white;
         }
 
-        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; }
+        /* NAV */
 
-        /* Hero Section (Cabecera principal) */
-        .hero {
-            background: linear-gradient(135deg, var(--primario), var(--secundario));
-            color: var(--blanco);
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
+        nav{
+            background:rgba(15,23,42,0.95);
+            backdrop-filter: blur(10px);
+            color:white;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:15px 5%;
+            position:sticky;
+            top:0;
+            z-index:1000;
         }
 
-        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 2rem; opacity: 0.9; }
-
-        /* Servicios */
-        .servicios { padding: 80px 5%; background: var(--gris-claro); }
-        .servicios h2 { text-align: center; margin-bottom: 50px; font-size: 2.5rem; color: var(--primario); }
-        
-        .grid-servicios {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+        .logo-container{
+            display:flex;
+            align-items:center;
+            gap:12px;
         }
 
-        .card {
-            background: var(--blanco);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+        .logo-container img{
+            width:60px;
+            height:60px;
+            object-fit:contain;
         }
 
-        .card:hover { transform: translateY(-10px); }
-        .card h3 { color: var(--secundario); margin-bottom: 15px; }
-
-        /* Botón de Acción */
-        .btn {
-            background: var(--acento);
-            color: var(--primario);
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: 0.3s;
+        .logo-text h2{
+            font-size:1.3rem;
         }
 
-        .btn:hover { background: var(--blanco); color: var(--primario); }
-
-        /* Contacto */
-        footer {
-            background: var(--primario);
-            color: var(--blanco);
-            padding: 40px 5%;
-            text-align: center;
+        .logo-text p{
+            font-size:0.8rem;
+            opacity:0.8;
         }
 
-        /* Mobile First */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
+        /* HERO */
+
+        .hero{
+            height:90vh;
+            background:
+            linear-gradient(rgba(15,23,42,0.75), rgba(30,58,138,0.8)),
+            url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop');
+            background-size:cover;
+            background-position:center;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            color:white;
+            padding:20px;
         }
+
+        .hero-content{
+            max-width:850px;
+        }
+
+        .hero h1{
+            font-size:4rem;
+            margin-bottom:20px;
+        }
+
+        .hero p{
+            font-size:1.2rem;
+            margin-bottom:35px;
+            line-height:1.8;
+        }
+
+        .btn{
+            display:inline-block;
+            background:var(--celeste);
+            color:var(--azul);
+            padding:15px 35px;
+            border-radius:10px;
+            text-decoration:none;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:white;
+            transform:translateY(-3px);
+        }
+
+        /* SECCIONES */
+
+        section{
+            padding:90px 8%;
+        }
+
+        .titulo{
+            text-align:center;
+            font-size:2.5rem;
+            color:var(--azul);
+            margin-bottom:50px;
+        }
+
+        /* CARDS */
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:30px;
+        }
+
+        .card{
+            background:white;
+            padding:35px;
+            border-radius:18px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.08);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        .card h3{
+            color:var(--azul2);
+            margin-bottom:15px;
+        }
+
+        /* NORMAS */
+
+        .normas{
+            background:var(--gris);
+        }
+
+        .lista{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .item{
+            background:white;
+            padding:20px;
+            border-left:5px solid var(--celeste);
+            border-radius:10px;
+            font-weight:600;
+        }
+
+        /* CLIENTES */
+
+        .clientes{
+            background:white;
+        }
+
+        .clientes-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:25px;
+        }
+
+        .cliente{
+            background:var(--gris);
+            padding:25px;
+            border-radius:15px;
+            text-align:center;
+            font-weight:600;
+        }
+
+        /* FOOTER */
+
+        footer{
+            background:var(--azul);
+            color:white;
+            text-align:center;
+            padding:60px 20px;
+        }
+
+        footer h2{
+            margin-bottom:20px;
+            font-size:2rem;
+        }
+
+        footer p{
+            margin:10px 0;
+        }
+
+        .redes{
+            margin-top:20px;
+        }
+
+        .redes a{
+            color:white;
+            text-decoration:none;
+            margin:0 10px;
+            font-weight:bold;
+        }
+
+        .redes a:hover{
+            color:var(--celeste);
+        }
+
+        @media(max-width:768px){
+
+            .hero h1{
+                font-size:2.5rem;
+            }
+
+            .hero p{
+                font-size:1rem;
+            }
+
+            .logo-text p{
+                display:none;
+            }
+
+        }
+
     </style>
 </head>
+
 <body>
 
+    <!-- NAV -->
+
     <nav>
-        <div class="logo">INSAFEI</div>
-        <div class="menu">Consultoría Profesional</div>
-    </nav>
 
-    <section class="hero">
-        <h1>Consultoría INSAFEI</h1>
-        <p>Soluciones estratégicas y seguridad para el crecimiento de tu empresa o proyecto personal.</p>
-        <a href="#contacto" class="btn">Solicitar Asesoría</a>
-    </section>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo INSAFEI">
 
-    <section class="servicios">
-        <h2>Nuestros Servicios</h2>
-        <div class="grid-servicios">
-            <div class="card">
-                <h3>Asesoría Estratégica</h3>
-                <p>Optimizamos tus procesos para alcanzar objetivos de alto impacto.</p>
-            </div>
-            <div class="card">
-                <h3>Gestión de Riesgos</h3>
-                <p>Identificación y mitigación de vulnerabilidades en tu estructura.</p>
-            </div>
-            <div class="card">
-                <h3>Capacitación</h3>
-                <p>Formación especializada para equipos de alto rendimiento.</p>
+            <div class="logo-text">
+                <h2>INSAFEI</h2>
+                <p>Inocuidad y Seguridad Infantil</p>
             </div>
         </div>
+
+        <div>
+            Consultoría Profesional
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Consultoría Integral INSAFEI</h1>
+
+            <p>
+                Especialistas en inocuidad, normatividad alimentaria y capacitación
+                para guarderías, estancias infantiles e instituciones educativas.
+            </p>
+
+            <a href="#contacto" class="btn">
+                Solicitar Asesoría
+            </a>
+
+        </div>
+
     </section>
 
+    <!-- SERVICIOS -->
+
+    <section>
+
+        <h2 class="titulo">Nuestros Servicios</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Capacitación</h3>
+                <p>
+                    Formación especializada en higiene, inocuidad y manejo adecuado de alimentos.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Implementación HACCP</h3>
+                <p>
+                    Desarrollo de programas de control y prevención de riesgos alimentarios.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Auditorías y Supervisión</h3>
+                <p>
+                    Evaluación de cumplimiento sanitario y mejora continua.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- NORMAS -->
+
+    <section class="normas">
+
+        <h2 class="titulo">Normas y Sistemas Aplicados</h2>
+
+        <div class="lista">
+
+            <div class="item">NOM-251-SSA1-2009</div>
+            <div class="item">NOM-043-SSA2-2012</div>
+            <div class="item">NOM-127-SSA1-1994</div>
+            <div class="item">NMX-F-605-NORMEX</div>
+            <div class="item">HACCP</div>
+            <div class="item">ISO 22000</div>
+            <div class="item">ISO 9001</div>
+            <div class="item">Codex Alimentarius</div>
+
+        </div>
+
+    </section>
+
+    <!-- CLIENTES -->
+
+    <section class="clientes">
+
+        <h2 class="titulo">Clientes Potenciales</h2>
+
+        <div class="clientes-grid">
+
+            <div class="cliente">Guarderías Privadas</div>
+
+            <div class="cliente">Estancias Infantiles</div>
+
+            <div class="cliente">Centros de Desarrollo Infantil</div>
+
+            <div class="cliente">Preescolares con Comedor</div>
+
+            <div class="cliente">Empresas con Guardería</div>
+
+            <div class="cliente">Instituciones Educativas</div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACTO -->
+
     <footer id="contacto">
+
         <h2>Contacto</h2>
-        <p>Email: contacto@insafei.com</p>
-        <p style="margin-top: 20px;">© 2026 INSAFEI - Todos los derechos reservados.</p>
+
+        <p>WhatsApp: 722 519 2333</p>
+
+        <p>Instagram: @INSAFEI</p>
+
+        <p>TikTok: @INSAFEI</p>
+
+        <div class="redes">
+
+            <a href="https://wa.me/527225192333" target="_blank">
+                WhatsApp
+            </a>
+
+            <a href="https://instagram.com/INSAFEI" target="_blank">
+                Instagram
+            </a>
+
+            <a href="https://tiktok.com/@INSAFEI" target="_blank">
+                TikTok
+            </a>
+
+        </div>
+
+        <p style="margin-top:30px;">
+            © 2026 INSAFEI | Todos los derechos reservados.
+        </p>
+
     </footer>
 
 </body>
