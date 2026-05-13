@@ -1,147 +1,629 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSAFEI | Consultoría Integral</title>
-    <!-- Google Fonts para una tipografía elegante -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <style>
-        /* Variables de color para fácil edición */
-        :root {
-            --primario: #1a365d; /* Azul oscuro empresarial */
-            --secundario: #2b6cb0;
-            --acento: #63b3ed;
-            --texto: #2d3748;
-            --blanco: #ffffff;
-            --gris-claro: #f7fafc;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+<title>INSAFEI | Consultoría en Inocuidad Alimentaria</title>
 
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--texto);
-            background-color: var(--blanco);
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        /* Navegación */
-        nav {
-            background: var(--primario);
-            color: var(--blanco);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+<style>
 
-        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; }
+:root{
+--azul:#0B1F3A;
+--azul2:#163A70;
+--celeste:#4FA3FF;
+--blanco:#ffffff;
+--gris:#f4f7fb;
+--texto:#1f2937;
+}
 
-        /* Hero Section (Cabecera principal) */
-        .hero {
-            background: linear-gradient(135deg, var(--primario), var(--secundario));
-            color: var(--blanco);
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
-        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 2rem; opacity: 0.9; }
+body{
+font-family:'Poppins',sans-serif;
+background:var(--blanco);
+color:var(--texto);
+line-height:1.6;
+}
 
-        /* Servicios */
-        .servicios { padding: 80px 5%; background: var(--gris-claro); }
-        .servicios h2 { text-align: center; margin-bottom: 50px; font-size: 2.5rem; color: var(--primario); }
-        
-        .grid-servicios {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
+/* NAVBAR */
 
-        .card {
-            background: var(--blanco);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
+nav{
+background:var(--azul);
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
 
-        .card:hover { transform: translateY(-10px); }
-        .card h3 { color: var(--secundario); margin-bottom: 15px; }
+.logo{
+color:white;
+font-size:28px;
+font-weight:700;
+letter-spacing:2px;
+}
 
-        /* Botón de Acción */
-        .btn {
-            background: var(--acento);
-            color: var(--primario);
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
 
-        .btn:hover { background: var(--blanco); color: var(--primario); }
+nav ul li a{
+color:white;
+text-decoration:none;
+font-size:15px;
+transition:0.3s;
+}
 
-        /* Contacto */
-        footer {
-            background: var(--primario);
-            color: var(--blanco);
-            padding: 40px 5%;
-            text-align: center;
-        }
+nav ul li a:hover{
+color:var(--celeste);
+}
 
-        /* Mobile First */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-        }
-    </style>
+/* HERO */
+
+.hero{
+height:90vh;
+background:
+linear-gradient(rgba(11,31,58,0.8), rgba(11,31,58,0.8)),
+url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+
+.hero-content h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero-content p{
+max-width:750px;
+margin:auto;
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 35px;
+background:var(--celeste);
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+background:white;
+color:var(--azul);
+}
+
+/* SECCIONES */
+
+section{
+padding:80px 8%;
+}
+
+.titulo{
+text-align:center;
+font-size:40px;
+color:var(--azul);
+margin-bottom:50px;
+}
+
+/* MISION VISION */
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.info-box{
+background:white;
+padding:35px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.info-box h3{
+color:var(--azul2);
+margin-bottom:15px;
+font-size:28px;
+}
+
+/* VALORES */
+
+.valores{
+background:var(--gris);
+}
+
+.valores-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.valor{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.valor h4{
+color:var(--azul);
+margin-bottom:10px;
+}
+
+/* CLIENTES */
+
+.clientes-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.cliente{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cliente img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.cliente h4{
+padding:20px;
+color:var(--azul);
+}
+
+/* SERVICIOS */
+
+.servicios{
+background:var(--gris);
+}
+
+.servicios-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.servicio{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.servicio h3{
+color:var(--azul2);
+margin-bottom:15px;
+}
+
+/* PAQUETES */
+
+.paquetes-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.paquete{
+border-radius:18px;
+padding:35px;
+color:white;
+box-shadow:0 8px 25px rgba(0,0,0,0.15);
+}
+
+.bronce{
+background:#8B5E3C;
+}
+
+.plata{
+background:#6B7280;
+}
+
+.oro{
+background:#C9A227;
+}
+
+.paquete h3{
+font-size:30px;
+margin-bottom:15px;
+}
+
+.paquete ul{
+margin-top:15px;
+padding-left:20px;
+}
+
+/* NORMAS */
+
+.normas{
+background:var(--gris);
+}
+
+.normas-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.norma{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+font-weight:600;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* CONTACTO */
+
+.contacto{
+background:var(--azul);
+color:white;
+text-align:center;
+}
+
+.contacto h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.contacto p{
+margin:10px 0;
+font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+background:#061120;
+color:white;
+text-align:center;
+padding:20px;
+font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:38px;
+}
+
+.hero-content p{
+font-size:17px;
+}
+
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-    <nav>
-        <div class="logo">INSAFEI</div>
-        <div class="menu">Consultoría Profesional</div>
-    </nav>
+<!-- NAVBAR -->
 
-    <section class="hero">
-        <h1>Consultoría INSAFEI</h1>
-        <p>Soluciones estratégicas y seguridad para el crecimiento de tu empresa o proyecto personal.</p>
-        <a href="#contacto" class="btn">Solicitar Asesoría</a>
-    </section>
+<nav>
 
-    <section class="servicios">
-        <h2>Nuestros Servicios</h2>
-        <div class="grid-servicios">
-            <div class="card">
-                <h3>Asesoría Estratégica</h3>
-                <p>Optimizamos tus procesos para alcanzar objetivos de alto impacto.</p>
-            </div>
-            <div class="card">
-                <h3>Gestión de Riesgos</h3>
-                <p>Identificación y mitigación de vulnerabilidades en tu estructura.</p>
-            </div>
-            <div class="card">
-                <h3>Capacitación</h3>
-                <p>Formación especializada para equipos de alto rendimiento.</p>
-            </div>
-        </div>
-    </section>
+<div class="logo">INSAFEI</div>
 
-    <footer id="contacto">
-        <h2>Contacto</h2>
-        <p>Email: contacto@insafei.com</p>
-        <p style="margin-top: 20px;">© 2026 INSAFEI - Todos los derechos reservados.</p>
-    </footer>
+<ul>
+<li><a href="#mision">Nosotros</a></li>
+<li><a href="#clientes">Clientes</a></li>
+<li><a href="#servicios">Servicios</a></li>
+<li><a href="#paquetes">Paquetes</a></li>
+<li><a href="#normas">Normas</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Consultoría INSAFEI</h1>
+
+<p>
+Especialistas en inocuidad alimentaria, normatividad y capacitación para guarderías,
+centros infantiles e instituciones educativas.
+</p>
+
+<a href="#contacto" class="btn">Solicitar Información</a>
+
+</div>
+
+</section>
+
+<!-- MISION Y VISION -->
+
+<section id="mision">
+
+<h2 class="titulo">Misión y Visión</h2>
+
+<div class="info-grid">
+
+<div class="info-box">
+<h3>Misión</h3>
+<p>
+Brindar servicios en inocuidad y normatividad alimentaria para guarderías y estancias infantiles,
+garantizando alimentos seguros mediante capacitación continua, supervisión e implementación
+de buenas prácticas.
+</p>
+</div>
+
+<div class="info-box">
+<h3>Visión</h3>
+<p>
+Consolidarnos como una consultoría líder en inocuidad alimentaria infantil,
+destacando por la mejora continua, capacitación y cumplimiento normativo.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- VALORES -->
+
+<section class="valores">
+
+<h2 class="titulo">Valores</h2>
+
+<div class="valores-grid">
+
+<div class="valor">
+<h4>Responsabilidad</h4>
+<p>Compromiso con la seguridad alimentaria.</p>
+</div>
+
+<div class="valor">
+<h4>Compromiso</h4>
+<p>Calidad constante en cada servicio.</p>
+</div>
+
+<div class="valor">
+<h4>Honestidad</h4>
+<p>Transparencia en procesos y resultados.</p>
+</div>
+
+<div class="valor">
+<h4>Inclusión</h4>
+<p>Atención equitativa y profesional.</p>
+</div>
+
+<div class="valor">
+<h4>Trabajo en Equipo</h4>
+<p>Colaboración para mejores resultados.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CLIENTES -->
+
+<section id="clientes">
+
+<h2 class="titulo">Clientes Potenciales</h2>
+
+<div class="clientes-grid">
+
+<div class="cliente">
+<img src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1200&auto=format&fit=crop">
+<h4>Guarderías y Estancias Infantiles</h4>
+</div>
+
+<div class="cliente">
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop">
+<h4>Preescolares y Escuelas</h4>
+</div>
+
+<div class="cliente">
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop">
+<h4>Empresas con Guarderías Internas</h4>
+</div>
+
+<div class="cliente">
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop">
+<h4>Instituciones Educativas</h4>
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICIOS -->
+
+<section class="servicios" id="servicios">
+
+<h2 class="titulo">Servicios</h2>
+
+<div class="servicios-grid">
+
+<div class="servicio">
+<h3>Capacitación</h3>
+<p>Formación del personal en higiene, BPM y manipulación segura.</p>
+</div>
+
+<div class="servicio">
+<h3>Implementación HACCP</h3>
+<p>Control de riesgos y seguridad alimentaria.</p>
+</div>
+
+<div class="servicio">
+<h3>Manual de Calidad</h3>
+<p>Desarrollo de documentación y procesos normativos.</p>
+</div>
+
+<div class="servicio">
+<h3>Control de Mermas</h3>
+<p>Optimización de recursos y reducción de desperdicios.</p>
+</div>
+
+<div class="servicio">
+<h3>PEPS</h3>
+<p>Organización y rotación eficiente de alimentos.</p>
+</div>
+
+<div class="servicio">
+<h3>Asesoría Normativa</h3>
+<p>Cumplimiento sanitario y preparación para auditorías.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PAQUETES -->
+
+<section id="paquetes">
+
+<h2 class="titulo">Paquetes</h2>
+
+<div class="paquetes-grid">
+
+<div class="paquete bronce">
+
+<h3>Bronce</h3>
+
+<p><strong>$24,000 MXN</strong></p>
+
+<p>Duración: 1 semana / 12 hrs</p>
+
+<ul>
+<li>Diagnóstico inicial</li>
+<li>Visita técnica</li>
+<li>Plática de higiene</li>
+<li>Plantillas de manuales</li>
+<li>Control de mermas</li>
+</ul>
+
+</div>
+
+<div class="paquete plata">
+
+<h3>Plata</h3>
+
+<p><strong>$72,000 MXN</strong></p>
+
+<p>Duración: 3 semanas / 36 hrs</p>
+
+<ul>
+<li>Implementación HACCP</li>
+<li>Capacitación PEPS</li>
+<li>Manuales editables</li>
+<li>Sugerencia Punto Limpio</li>
+<li>Mejora de procesos</li>
+</ul>
+
+</div>
+
+<div class="paquete oro">
+
+<h3>Oro</h3>
+
+<p><strong>$192,000 MXN</strong></p>
+
+<p>Duración: 1 mes / 48 hrs</p>
+
+<ul>
+<li>Implementación BPM</li>
+<li>ISO 22000 y 9001</li>
+<li>Impulso Distintivo H</li>
+<li>Cumplimiento legal</li>
+<li>Excelencia operativa</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- NORMAS -->
+
+<section class="normas" id="normas">
+
+<h2 class="titulo">Normas y Sistemas</h2>
+
+<div class="normas-grid">
+
+<div class="norma">NOM-251-SSA1-2009</div>
+<div class="norma">NOM-043-SSA2-2012</div>
+<div class="norma">NOM-127-SSA1-1994</div>
+<div class="norma">NMX-F-605-NORMEX</div>
+<div class="norma">HACCP</div>
+<div class="norma">ISO 22000</div>
+<div class="norma">ISO 9001</div>
+<div class="norma">Codex Alimentarius</div>
+
+</div>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section class="contacto" id="contacto">
+
+<h2>Contacto</h2>
+
+<p>WhatsApp: 722 519 2333</p>
+
+<p>Instagram: @INSAFEI</p>
+
+<p>TikTok: @INSAFEI</p>
+
+<p>Email: contacto@insafei.com</p>
+
+</section>
+
+<footer>
+
+© 2026 INSAFEI | Consultoría en Inocuidad Alimentaria
+
+</footer>
 
 </body>
 </html>
