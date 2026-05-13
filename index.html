@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INSAFEI | Consultoría en Inocuidad Alimentaria</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f7fa;
+color:#111827;
+}
+
+/* MENU */
+
+nav{
+background:#06142e;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logo{
+color:white;
+font-size:2rem;
+font-weight:700;
+letter-spacing:2px;
+}
+
+.logo span{
+color:#3b82f6;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#60a5fa;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1800&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+
+.hero-content h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero-content h1 span{
+color:#60a5fa;
+}
+
+.hero-content p{
+font-size:1.3rem;
+max-width:800px;
+margin:auto;
+line-height:1.8;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#2563eb;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#1d4ed8;
+transform:scale(1.05);
+}
+
+/* GENERAL */
+
+section{
+padding:90px 8%;
+}
+
+.title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.title h2{
+font-size:2.8rem;
+color:#06142e;
+margin-bottom:10px;
+}
+
+.title p{
+color:#4b5563;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:230px;
+object-fit:cover;
+}
+
+.card-content{
+padding:25px;
+}
+
+.card-content h3{
+color:#06142e;
+margin-bottom:15px;
+}
+
+.card-content p{
+line-height:1.7;
+color:#4b5563;
+}
+
+/* NORMAS */
+
+.normas{
+background:#06142e;
+color:white;
+}
+
+.normas .title h2{
+color:white;
+}
+
+.normas-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.norma{
+background:#0f1f3d;
+padding:25px;
+border-radius:18px;
+border-left:5px solid #3b82f6;
+transition:0.3s;
+}
+
+.norma:hover{
+transform:scale(1.03);
+}
+
+.norma h3{
+margin-bottom:10px;
+color:#60a5fa;
+}
+
+/* CONTACTO */
+
+.contacto{
+background:white;
+}
+
+.contact-box{
+background:#06142e;
+color:white;
+padding:50px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.contact-box h2{
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+.contact-box p{
+margin:12px 0;
+font-size:1.1rem;
+}
+
+/* FOOTER */
+
+footer{
+background:#020817;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
+}
+
+footer span{
+color:#60a5fa;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:2.5rem;
+}
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+
+<nav>
+<div class="logo">INSA<span>FEI</span></div>
+
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#clientes">Clientes</a></li>
+<li><a href="#servicios">Servicios</a></li>
+<li><a href="#normas">Normas</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<h1>Consultoría en <span>Inocuidad Alimentaria</span></h1>
+
+<p>
+Especialistas en normatividad, seguridad alimentaria y capacitación
+para guarderías, estancias infantiles y servicios de alimentación.
+Garantizamos calidad, cumplimiento sanitario y mejora continua.
+</p>
+
+<a href="#contacto" class="btn">Contáctanos</a>
+
+</div>
+
+</section>
+
+<!-- CLIENTES -->
+
+<section id="clientes">
+
+<div class="title">
+<h2>Clientes Potenciales</h2>
+<p>Instituciones comprometidas con la seguridad e inocuidad alimentaria.</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<h3>Guarderías Privadas</h3>
+<p>
+Servicios especializados para guarderías con comedor infantil y control sanitario.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<h3>Preescolares</h3>
+<p>
+Asesoría en higiene, alimentación saludable y cumplimiento de normas oficiales.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<h3>Empresas con Guarderías</h3>
+<p>
+Implementación de sistemas de inocuidad y capacitación del personal.
+</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICIOS -->
+
+<section id="servicios">
+
+<div class="title">
+<h2>Servicios</h2>
+<p>Soluciones profesionales para garantizar alimentos seguros.</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<h3>Capacitación</h3>
+<p>
+Capacitación en BPM, HACCP, higiene y manipulación correcta de alimentos.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<h3>Auditorías</h3>
+<p>
+Supervisión periódica, control sanitario y evaluación del cumplimiento normativo.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<h3>Diseño de Menús</h3>
+<p>
+Planificación de menús saludables, balanceados y adecuados para niños.
+</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- NORMAS -->
+
+<section class="normas" id="normas">
+
+<div class="title">
+<h2>Normas y Certificaciones</h2>
+<p>Trabajamos bajo estándares nacionales e internacionales.</p>
+</div>
+
+<div class="normas-grid">
+
+<div class="norma">
+<h3>NOM-251-SSA1-2009</h3>
+<p>Prácticas de higiene para el proceso de alimentos.</p>
+</div>
+
+<div class="norma">
+<h3>HACCP</h3>
+<p>Análisis de peligros y puntos críticos de control.</p>
+</div>
+
+<div class="norma">
+<h3>ISO 22000</h3>
+<p>Sistema internacional de gestión de inocuidad alimentaria.</p>
+</div>
+
+<div class="norma">
+<h3>ISO 9001</h3>
+<p>Gestión de calidad y mejora continua.</p>
+</div>
+
+<div class="norma">
+<h3>NMX-F-605-NORMEX</h3>
+<p>Distintivo H para higiene en alimentos.</p>
+</div>
+
+<div class="norma">
+<h3>Codex Alimentarius</h3>
+<p>Lineamientos internacionales de seguridad alimentaria.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section class="contacto" id="contacto">
+
+<div class="contact-box">
+
+<h2>Contáctanos</h2>
+
+<p>📞 WhatsApp: 722 519 2333</p>
+
+<p>📸 Instagram: @INSAFEI</p>
+
+<p>🎵 TikTok: @INSAFEI</p>
+
+<p>📧 Consultoría especializada en inocuidad y seguridad alimentaria infantil.</p>
+
+<a href="https://wa.me/527225192333" class="btn">
+Enviar mensaje
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 <span>INSAFEI</span> | Inocuidad y Seguridad Infantil
+</p>
+
+</footer>
+
+</body>
+</html>
