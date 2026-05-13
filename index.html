@@ -8,14 +8,17 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
 <style>
 
 :root{
---azul:#0B1F3A;
---azul2:#163A70;
---celeste:#4FA3FF;
+--azul:#081B33;
+--azul2:#123D72;
+--celeste:#5DA9FF;
 --blanco:#ffffff;
---gris:#f4f7fb;
+--gris:#F4F7FB;
 --texto:#1f2937;
 }
 
@@ -28,15 +31,16 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
-background:var(--blanco);
+background:white;
 color:var(--texto);
-line-height:1.6;
+line-height:1.7;
 }
 
 /* NAVBAR */
 
 nav{
-background:var(--azul);
+background:rgba(8,27,51,0.95);
+backdrop-filter:blur(10px);
 padding:15px 8%;
 display:flex;
 justify-content:space-between;
@@ -44,19 +48,28 @@ align-items:center;
 position:sticky;
 top:0;
 z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,0.2);
 }
 
 .logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+width:60px;
+height:60px;
+object-fit:contain;
+}
+
+.logo h2{
 color:white;
 font-size:28px;
-font-weight:700;
-letter-spacing:2px;
 }
 
 nav ul{
 display:flex;
-gap:20px;
+gap:22px;
 list-style:none;
 }
 
@@ -74,39 +87,43 @@ color:var(--celeste);
 /* HERO */
 
 .hero{
-height:90vh;
+height:95vh;
 background:
-linear-gradient(rgba(11,31,58,0.8), rgba(11,31,58,0.8)),
+linear-gradient(rgba(8,27,51,0.75), rgba(8,27,51,0.8)),
 url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop');
+
 background-size:cover;
 background-position:center;
+
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
 padding:20px;
 color:white;
 }
 
-.hero-content h1{
-font-size:55px;
+.hero-content{
+max-width:850px;
+}
+
+.hero h1{
+font-size:58px;
 margin-bottom:20px;
 }
 
-.hero-content p{
-max-width:750px;
-margin:auto;
+.hero p{
 font-size:20px;
-margin-bottom:30px;
+margin-bottom:35px;
 }
 
 .btn{
 display:inline-block;
-padding:14px 35px;
+padding:15px 35px;
 background:var(--celeste);
 color:white;
 text-decoration:none;
-border-radius:8px;
+border-radius:10px;
 font-weight:600;
 transition:0.3s;
 }
@@ -116,38 +133,38 @@ background:white;
 color:var(--azul);
 }
 
-/* SECCIONES */
+/* GENERAL */
 
 section{
-padding:80px 8%;
+padding:90px 8%;
 }
 
 .titulo{
 text-align:center;
-font-size:40px;
+font-size:42px;
+margin-bottom:55px;
 color:var(--azul);
-margin-bottom:50px;
 }
 
-/* MISION VISION */
+/* INFO */
 
 .info-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:30px;
 }
 
 .info-box{
 background:white;
-padding:35px;
-border-radius:15px;
+padding:40px;
+border-radius:20px;
 box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
 .info-box h3{
 color:var(--azul2);
-margin-bottom:15px;
-font-size:28px;
+margin-bottom:20px;
+font-size:30px;
 }
 
 /* VALORES */
@@ -164,18 +181,54 @@ gap:25px;
 
 .valor{
 background:white;
-padding:25px;
-border-radius:15px;
+padding:35px;
+border-radius:18px;
 text-align:center;
-box-shadow:0 4px 15px rgba(0,0,0,0.08);
+box-shadow:0 5px 18px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.valor:hover{
+transform:translateY(-8px);
+}
+
+.valor img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:15px;
+margin-bottom:18px;
 }
 
 .valor h4{
 color:var(--azul);
-margin-bottom:10px;
+font-size:22px;
+}
+
+/* OBJETIVOS */
+
+.objetivos{
+background:white;
+}
+
+.objetivos-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.objetivo{
+background:var(--gris);
+padding:30px;
+border-radius:18px;
+border-left:6px solid var(--celeste);
 }
 
 /* CLIENTES */
+
+.clientes{
+background:var(--gris);
+}
 
 .clientes-grid{
 display:grid;
@@ -185,44 +238,66 @@ gap:25px;
 
 .cliente{
 background:white;
-border-radius:15px;
+border-radius:18px;
 overflow:hidden;
-box-shadow:0 4px 15px rgba(0,0,0,0.1);
+box-shadow:0 5px 18px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.cliente:hover{
+transform:translateY(-8px);
 }
 
 .cliente img{
 width:100%;
-height:180px;
+height:200px;
 object-fit:cover;
 }
 
 .cliente h4{
 padding:20px;
 color:var(--azul);
+text-align:center;
 }
 
 /* SERVICIOS */
 
-.servicios{
-background:var(--gris);
-}
-
 .servicios-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
 
 .servicio{
 background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 4px 15px rgba(0,0,0,0.08);
+padding:35px;
+border-radius:18px;
+box-shadow:0 5px 18px rgba(0,0,0,0.08);
 }
 
 .servicio h3{
 color:var(--azul2);
 margin-bottom:15px;
+}
+
+/* NORMAS */
+
+.normas{
+background:var(--gris);
+}
+
+.normas-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.norma{
+background:white;
+padding:25px;
+border-radius:15px;
+font-weight:600;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
 /* PAQUETES */
@@ -234,8 +309,8 @@ gap:30px;
 }
 
 .paquete{
-border-radius:18px;
-padding:35px;
+padding:40px;
+border-radius:20px;
 color:white;
 box-shadow:0 8px 25px rgba(0,0,0,0.15);
 }
@@ -253,34 +328,13 @@ background:#C9A227;
 }
 
 .paquete h3{
-font-size:30px;
+font-size:32px;
 margin-bottom:15px;
 }
 
 .paquete ul{
-margin-top:15px;
 padding-left:20px;
-}
-
-/* NORMAS */
-
-.normas{
-background:var(--gris);
-}
-
-.normas-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.norma{
-background:white;
-padding:25px;
-border-radius:15px;
-text-align:center;
-font-weight:600;
-box-shadow:0 4px 15px rgba(0,0,0,0.08);
+margin-top:15px;
 }
 
 /* CONTACTO */
@@ -292,8 +346,8 @@ text-align:center;
 }
 
 .contacto h2{
-font-size:40px;
-margin-bottom:20px;
+font-size:42px;
+margin-bottom:25px;
 }
 
 .contacto p{
@@ -301,31 +355,49 @@ margin:10px 0;
 font-size:18px;
 }
 
+.redes{
+margin-top:25px;
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.redes a{
+color:white;
+font-size:35px;
+transition:0.3s;
+}
+
+.redes a:hover{
+color:var(--celeste);
+transform:scale(1.2);
+}
+
 /* FOOTER */
 
 footer{
-background:#061120;
+background:#05101F;
 color:white;
 text-align:center;
 padding:20px;
-font-size:14px;
 }
 
 /* RESPONSIVE */
 
 @media(max-width:768px){
 
-.hero-content h1{
+.hero h1{
 font-size:38px;
 }
 
-.hero-content p{
+.hero p{
 font-size:17px;
 }
 
 nav{
 flex-direction:column;
-gap:10px;
+gap:15px;
 }
 
 nav ul{
@@ -344,14 +416,21 @@ justify-content:center;
 
 <nav>
 
-<div class="logo">INSAFEI</div>
+<div class="logo">
+
+<img src="logo.png" alt="Logo INSAFEI">
+
+<h2>INSAFEI</h2>
+
+</div>
 
 <ul>
-<li><a href="#mision">Nosotros</a></li>
+<li><a href="#nosotros">Nosotros</a></li>
+<li><a href="#objetivos">Objetivos</a></li>
 <li><a href="#clientes">Clientes</a></li>
 <li><a href="#servicios">Servicios</a></li>
-<li><a href="#paquetes">Paquetes</a></li>
 <li><a href="#normas">Normas</a></li>
+<li><a href="#paquetes">Paquetes</a></li>
 <li><a href="#contacto">Contacto</a></li>
 </ul>
 
@@ -366,11 +445,13 @@ justify-content:center;
 <h1>Consultoría INSAFEI</h1>
 
 <p>
-Especialistas en inocuidad alimentaria, normatividad y capacitación para guarderías,
-centros infantiles e instituciones educativas.
+Especialistas en inocuidad y normatividad alimentaria para guarderías,
+estancias infantiles e instituciones educativas.
 </p>
 
-<a href="#contacto" class="btn">Solicitar Información</a>
+<a href="#contacto" class="btn">
+Solicitar Cotización
+</a>
 
 </div>
 
@@ -378,27 +459,34 @@ centros infantiles e instituciones educativas.
 
 <!-- MISION Y VISION -->
 
-<section id="mision">
+<section id="nosotros">
 
 <h2 class="titulo">Misión y Visión</h2>
 
 <div class="info-grid">
 
 <div class="info-box">
+
 <h3>Misión</h3>
+
 <p>
-Brindar servicios en inocuidad y normatividad alimentaria para guarderías y estancias infantiles,
-garantizando alimentos seguros mediante capacitación continua, supervisión e implementación
-de buenas prácticas.
+Somos una consultoría en inocuidad y normatividad alimentaria para guarderías,
+que garantiza alimentos seguros, promueve hábitos saludables y cumple con las normas
+mediante capacitación, supervisión y mejora continua.
 </p>
+
 </div>
 
 <div class="info-box">
+
 <h3>Visión</h3>
+
 <p>
-Consolidarnos como una consultoría líder en inocuidad alimentaria infantil,
-destacando por la mejora continua, capacitación y cumplimiento normativo.
+Consolidarnos como una consultoría líder en la región en normatividad e inocuidad alimentaria,
+impulsando servicios de alimentación infantil seguros mediante la capacitación,
+supervisión y mejora continua del personal.
 </p>
+
 </div>
 
 </div>
@@ -414,28 +502,56 @@ destacando por la mejora continua, capacitación y cumplimiento normativo.
 <div class="valores-grid">
 
 <div class="valor">
+<img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=1200&auto=format&fit=crop">
+<h4>Empatía</h4>
+</div>
+
+<div class="valor">
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop">
 <h4>Responsabilidad</h4>
-<p>Compromiso con la seguridad alimentaria.</p>
 </div>
 
 <div class="valor">
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop">
+<h4>Respeto</h4>
+</div>
+
+<div class="valor">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
 <h4>Compromiso</h4>
-<p>Calidad constante en cada servicio.</p>
 </div>
 
 <div class="valor">
-<h4>Honestidad</h4>
-<p>Transparencia en procesos y resultados.</p>
-</div>
-
-<div class="valor">
-<h4>Inclusión</h4>
-<p>Atención equitativa y profesional.</p>
-</div>
-
-<div class="valor">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
 <h4>Trabajo en Equipo</h4>
-<p>Colaboración para mejores resultados.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- OBJETIVOS -->
+
+<section class="objetivos" id="objetivos">
+
+<h2 class="titulo">Objetivos</h2>
+
+<div class="objetivos-grid">
+
+<div class="objetivo">
+Implementar estrategias de supervisión y control para prevenir riesgos sanitarios y fortalecer la inocuidad.
+</div>
+
+<div class="objetivo">
+Dar seguimiento al cumplimiento de las normas de inocuidad y seguridad alimentaria.
+</div>
+
+<div class="objetivo">
+Garantizar calidad nutricional mediante capacitación y mejora continua.
+</div>
+
+<div class="objetivo">
+Fortalecer procesos enfocados en calidad, prevención y satisfacción del cliente.
 </div>
 
 </div>
@@ -444,30 +560,30 @@ destacando por la mejora continua, capacitación y cumplimiento normativo.
 
 <!-- CLIENTES -->
 
-<section id="clientes">
+<section class="clientes" id="clientes">
 
-<h2 class="titulo">Clientes Potenciales</h2>
+<h2 class="titulo">Nuestros Clientes</h2>
 
 <div class="clientes-grid">
 
 <div class="cliente">
 <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1200&auto=format&fit=crop">
-<h4>Guarderías y Estancias Infantiles</h4>
+<h4>Guarderías Privadas y de Gobierno</h4>
 </div>
 
 <div class="cliente">
 <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop">
-<h4>Preescolares y Escuelas</h4>
-</div>
-
-<div class="cliente">
-<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop">
-<h4>Empresas con Guarderías Internas</h4>
+<h4>Instituciones Educativas</h4>
 </div>
 
 <div class="cliente">
 <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop">
-<h4>Instituciones Educativas</h4>
+<h4>Empresas con Guarderías</h4>
+</div>
+
+<div class="cliente">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+<h4>Estancias Infantiles</h4>
 </div>
 
 </div>
@@ -476,41 +592,81 @@ destacando por la mejora continua, capacitación y cumplimiento normativo.
 
 <!-- SERVICIOS -->
 
-<section class="servicios" id="servicios">
+<section id="servicios">
 
-<h2 class="titulo">Servicios</h2>
+<h2 class="titulo">Servicios y Soluciones</h2>
 
 <div class="servicios-grid">
 
 <div class="servicio">
-<h3>Capacitación</h3>
-<p>Formación del personal en higiene, BPM y manipulación segura.</p>
+<h3>Diagnóstico Sanitario</h3>
+<p>Evaluación integral del servicio de alimentación.</p>
+</div>
+
+<div class="servicio">
+<h3>Manuales de Higiene</h3>
+<p>Elaboración de documentación sanitaria y control.</p>
 </div>
 
 <div class="servicio">
 <h3>Implementación HACCP</h3>
-<p>Control de riesgos y seguridad alimentaria.</p>
+<p>Programas de inocuidad y prevención de riesgos.</p>
 </div>
 
 <div class="servicio">
-<h3>Manual de Calidad</h3>
-<p>Desarrollo de documentación y procesos normativos.</p>
+<h3>Capacitación</h3>
+<p>Manipulación higiénica y alimentación infantil.</p>
 </div>
 
 <div class="servicio">
-<h3>Control de Mermas</h3>
-<p>Optimización de recursos y reducción de desperdicios.</p>
+<h3>Auditorías</h3>
+<p>Supervisión y mejora continua de procesos.</p>
 </div>
 
 <div class="servicio">
-<h3>PEPS</h3>
-<p>Organización y rotación eficiente de alimentos.</p>
+<h3>Gestión de Riesgos</h3>
+<p>Control de contaminación y seguridad alimentaria.</p>
 </div>
 
 <div class="servicio">
-<h3>Asesoría Normativa</h3>
-<p>Cumplimiento sanitario y preparación para auditorías.</p>
+<h3>Diseño de Menús</h3>
+<p>Menús balanceados por grupo de edad.</p>
 </div>
+
+<div class="servicio">
+<h3>Sostenibilidad</h3>
+<p>Reducción de mermas y prácticas sustentables.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- NORMAS -->
+
+<section class="normas" id="normas">
+
+<h2 class="titulo">Normas y Sistemas</h2>
+
+<div class="normas-grid">
+
+<div class="norma">Codex Alimentarius (HACCP)</div>
+
+<div class="norma">NOM-251-SSA1-2009</div>
+
+<div class="norma">NMX-F-605-NORMEX-2018</div>
+
+<div class="norma">NOM-032-SSA3-2010</div>
+
+<div class="norma">NOM-043-SSA2-2012</div>
+
+<div class="norma">NOM-051-SCFI/SSA1-2010</div>
+
+<div class="norma">NOM-127-SSA1-1994</div>
+
+<div class="norma">ISO 9001</div>
+
+<div class="norma">ISO 22000</div>
 
 </div>
 
@@ -528,17 +684,21 @@ destacando por la mejora continua, capacitación y cumplimiento normativo.
 
 <h3>Bronce</h3>
 
-<p><strong>$24,000 MXN</strong></p>
+<p><strong>Duración:</strong> 1 semana / 12 hrs</p>
 
-<p>Duración: 1 semana / 12 hrs</p>
+<p><strong>Foco:</strong> Diagnóstico y cultura básica.</p>
 
 <ul>
-<li>Diagnóstico inicial</li>
-<li>Visita técnica</li>
+<li>1 visita técnica</li>
 <li>Plática de higiene</li>
 <li>Plantillas de manuales</li>
+<li>Guía sustentable</li>
 <li>Control de mermas</li>
 </ul>
+
+<p style="margin-top:15px;">
+Meta: Identificar riesgos a bajo costo.
+</p>
 
 </div>
 
@@ -546,17 +706,20 @@ destacando por la mejora continua, capacitación y cumplimiento normativo.
 
 <h3>Plata</h3>
 
-<p><strong>$72,000 MXN</strong></p>
+<p><strong>Duración:</strong> 3 semanas / 36 hrs</p>
 
-<p>Duración: 3 semanas / 36 hrs</p>
+<p><strong>Foco:</strong> Capacitación y mejora de procesos.</p>
 
 <ul>
 <li>Implementación HACCP</li>
-<li>Capacitación PEPS</li>
 <li>Manuales editables</li>
+<li>Capacitación PEPS</li>
 <li>Sugerencia Punto Limpio</li>
-<li>Mejora de procesos</li>
 </ul>
+
+<p style="margin-top:15px;">
+Meta: Personal calificado y orden operativo.
+</p>
 
 </div>
 
@@ -564,42 +727,29 @@ destacando por la mejora continua, capacitación y cumplimiento normativo.
 
 <h3>Oro</h3>
 
-<p><strong>$192,000 MXN</strong></p>
+<p><strong>Duración:</strong> 1 mes / 48 hrs</p>
 
-<p>Duración: 1 mes / 48 hrs</p>
+<p><strong>Foco:</strong> Cumplimiento normativo y prestigio.</p>
 
 <ul>
 <li>Implementación BPM</li>
-<li>ISO 22000 y 9001</li>
+<li>ISO 22000/9001</li>
 <li>Impulso Distintivo H</li>
-<li>Cumplimiento legal</li>
-<li>Excelencia operativa</li>
+<li>Cumplimiento legal total</li>
 </ul>
 
-</div>
+<p style="margin-top:15px;">
+Meta: Certificación y cumplimiento legal total.
+</p>
 
 </div>
 
-</section>
-
-<!-- NORMAS -->
-
-<section class="normas" id="normas">
-
-<h2 class="titulo">Normas y Sistemas</h2>
-
-<div class="normas-grid">
-
-<div class="norma">NOM-251-SSA1-2009</div>
-<div class="norma">NOM-043-SSA2-2012</div>
-<div class="norma">NOM-127-SSA1-1994</div>
-<div class="norma">NMX-F-605-NORMEX</div>
-<div class="norma">HACCP</div>
-<div class="norma">ISO 22000</div>
-<div class="norma">ISO 9001</div>
-<div class="norma">Codex Alimentarius</div>
-
 </div>
+
+<p style="text-align:center; margin-top:40px; font-size:18px;">
+Contáctanos mediante nuestras redes sociales para una cotización personalizada
+adaptada a las necesidades de tu institución.
+</p>
 
 </section>
 
@@ -609,13 +759,39 @@ destacando por la mejora continua, capacitación y cumplimiento normativo.
 
 <h2>Contacto</h2>
 
-<p>WhatsApp: 722 519 2333</p>
+<p>📞 7227399575</p>
 
-<p>Instagram: @INSAFEI</p>
+<p>📧 insafeiserviciosgmail.com</p>
 
-<p>TikTok: @INSAFEI</p>
+<p>🌐 https://consultoriainsafei-code.github.io/INSAFEI/</p>
 
-<p>Email: contacto@insafei.com</p>
+<div class="redes">
+
+<a href="#">
+<i class="fab fa-tiktok"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-x-twitter"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-facebook"></i>
+</a>
+
+</div>
+
+<p style="margin-top:25px;">
+TikTok: @INSAFEI
+</p>
+
+<p>
+X: @insafei.co
+</p>
+
+<p>
+Facebook: INSAFEI
+</p>
 
 </section>
 
