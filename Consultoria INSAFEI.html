@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSAFEI | Consultoría Integral</title>
+    <!-- Google Fonts para una tipografía elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Variables de color para fácil edición */
+        :root {
+            --primario: #1a365d; /* Azul oscuro empresarial */
+            --secundario: #2b6cb0;
+            --acento: #63b3ed;
+            --texto: #2d3748;
+            --blanco: #ffffff;
+            --gris-claro: #f7fafc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--texto);
+            background-color: var(--blanco);
+        }
+
+        /* Navegación */
+        nav {
+            background: var(--primario);
+            color: var(--blanco);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; }
+
+        /* Hero Section (Cabecera principal) */
+        .hero {
+            background: linear-gradient(135deg, var(--primario), var(--secundario));
+            color: var(--blanco);
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 2rem; opacity: 0.9; }
+
+        /* Servicios */
+        .servicios { padding: 80px 5%; background: var(--gris-claro); }
+        .servicios h2 { text-align: center; margin-bottom: 50px; font-size: 2.5rem; color: var(--primario); }
+        
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--blanco);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+        .card h3 { color: var(--secundario); margin-bottom: 15px; }
+
+        /* Botón de Acción */
+        .btn {
+            background: var(--acento);
+            color: var(--primario);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background: var(--blanco); color: var(--primario); }
+
+        /* Contacto */
+        footer {
+            background: var(--primario);
+            color: var(--blanco);
+            padding: 40px 5%;
+            text-align: center;
+        }
+
+        /* Mobile First */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">INSAFEI</div>
+        <div class="menu">Consultoría Profesional</div>
+    </nav>
+
+    <section class="hero">
+        <h1>Consultoría INSAFEI</h1>
+        <p>Soluciones estratégicas y seguridad para el crecimiento de tu empresa o proyecto personal.</p>
+        <a href="#contacto" class="btn">Solicitar Asesoría</a>
+    </section>
+
+    <section class="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="grid-servicios">
+            <div class="card">
+                <h3>Asesoría Estratégica</h3>
+                <p>Optimizamos tus procesos para alcanzar objetivos de alto impacto.</p>
+            </div>
+            <div class="card">
+                <h3>Gestión de Riesgos</h3>
+                <p>Identificación y mitigación de vulnerabilidades en tu estructura.</p>
+            </div>
+            <div class="card">
+                <h3>Capacitación</h3>
+                <p>Formación especializada para equipos de alto rendimiento.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <h2>Contacto</h2>
+        <p>Email: contacto@insafei.com</p>
+        <p style="margin-top: 20px;">© 2026 INSAFEI - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
