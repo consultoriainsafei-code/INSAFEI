@@ -48,6 +48,7 @@ align-items:center;
 position:sticky;
 top:0;
 z-index:1000;
+box-shadow:0 2px 15px rgba(0,0,0,0.15);
 }
 
 .logo{
@@ -69,8 +70,9 @@ font-size:28px;
 
 nav ul{
 display:flex;
-gap:22px;
+gap:20px;
 list-style:none;
+flex-wrap:wrap;
 }
 
 nav ul li a{
@@ -88,9 +90,10 @@ color:var(--celeste);
 
 .hero{
 height:95vh;
+
 background:
-linear-gradient(rgba(8,27,51,0.75), rgba(8,27,51,0.8)),
-url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop');
+linear-gradient(rgba(8,27,51,0.78), rgba(8,27,51,0.82)),
+url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop');
 
 background-size:cover;
 background-position:center;
@@ -108,7 +111,7 @@ max-width:850px;
 }
 
 .hero h1{
-font-size:58px;
+font-size:60px;
 margin-bottom:20px;
 }
 
@@ -131,6 +134,7 @@ transition:0.3s;
 .btn:hover{
 background:white;
 color:var(--azul);
+transform:translateY(-3px);
 }
 
 /* GENERAL */
@@ -146,7 +150,7 @@ margin-bottom:55px;
 color:var(--azul);
 }
 
-/* INFO */
+/* MISION Y VISION */
 
 .info-grid{
 display:grid;
@@ -158,7 +162,12 @@ gap:30px;
 background:white;
 padding:40px;
 border-radius:20px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.info-box:hover{
+transform:translateY(-5px);
 }
 
 .info-box h3{
@@ -181,10 +190,10 @@ gap:25px;
 
 .valor{
 background:white;
-padding:35px;
+padding:30px;
 border-radius:18px;
 text-align:center;
-box-shadow:0 5px 18px rgba(0,0,0,0.08);
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
 transition:0.3s;
 }
 
@@ -208,7 +217,12 @@ font-size:22px;
 /* OBJETIVOS */
 
 .objetivos{
-background:white;
+background:
+linear-gradient(rgba(244,247,251,0.95), rgba(244,247,251,0.95)),
+url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1400&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
 }
 
 .objetivos-grid{
@@ -218,10 +232,12 @@ gap:25px;
 }
 
 .objetivo{
-background:var(--gris);
+background:white;
 padding:30px;
 border-radius:18px;
 border-left:6px solid var(--celeste);
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+backdrop-filter:blur(5px);
 }
 
 /* CLIENTES */
@@ -240,7 +256,7 @@ gap:25px;
 background:white;
 border-radius:18px;
 overflow:hidden;
-box-shadow:0 5px 18px rgba(0,0,0,0.08);
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
 transition:0.3s;
 }
 
@@ -262,6 +278,15 @@ text-align:center;
 
 /* SERVICIOS */
 
+.servicios{
+background:
+linear-gradient(rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
+url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1400&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+}
+
 .servicios-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -272,7 +297,12 @@ gap:25px;
 background:white;
 padding:35px;
 border-radius:18px;
-box-shadow:0 5px 18px rgba(0,0,0,0.08);
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.servicio:hover{
+transform:translateY(-8px);
 }
 
 .servicio h3{
@@ -283,7 +313,12 @@ margin-bottom:15px;
 /* NORMAS */
 
 .normas{
-background:var(--gris);
+background:
+linear-gradient(rgba(244,247,251,0.95), rgba(244,247,251,0.95)),
+url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
 }
 
 .normas-grid{
@@ -298,6 +333,11 @@ padding:25px;
 border-radius:15px;
 font-weight:600;
 box-shadow:0 5px 15px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.norma:hover{
+transform:translateY(-5px);
 }
 
 /* PAQUETES */
@@ -312,7 +352,12 @@ gap:30px;
 padding:40px;
 border-radius:20px;
 color:white;
-box-shadow:0 8px 25px rgba(0,0,0,0.15);
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+transition:0.3s;
+}
+
+.paquete:hover{
+transform:translateY(-8px);
 }
 
 .bronce{
@@ -350,28 +395,35 @@ font-size:42px;
 margin-bottom:25px;
 }
 
-.contacto p{
-margin:10px 0;
-font-size:18px;
-}
-
-.redes{
-margin-top:25px;
+.redes-contacto{
+margin-top:30px;
 display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
+flex-direction:column;
+gap:20px;
+align-items:center;
 }
 
-.redes a{
+.red-social{
+display:flex;
+align-items:center;
+gap:15px;
+font-size:20px;
+}
+
+.red-social i{
+font-size:30px;
+color:var(--celeste);
+}
+
+.red-social a{
 color:white;
-font-size:35px;
+text-decoration:none;
 transition:0.3s;
 }
 
-.redes a:hover{
+.red-social a:hover{
 color:var(--celeste);
-transform:scale(1.2);
+transform:scale(1.05);
 }
 
 /* FOOTER */
@@ -401,7 +453,6 @@ gap:15px;
 }
 
 nav ul{
-flex-wrap:wrap;
 justify-content:center;
 }
 
@@ -592,7 +643,7 @@ Fortalecer procesos enfocados en calidad, prevención y satisfacción del client
 
 <!-- SERVICIOS -->
 
-<section id="servicios">
+<section class="servicios" id="servicios">
 
 <h2 class="titulo">Servicios y Soluciones</h2>
 
@@ -759,38 +810,61 @@ adaptada a las necesidades de tu institución.
 
 <h2>Contacto</h2>
 
-<p>📞 7227399575</p>
+<div class="redes-contacto">
 
-<p>📧 insafeiserviciosgmail.com</p>
+<div class="red-social">
+<i class="fab fa-whatsapp"></i>
 
-<p>🌐 https://consultoriainsafei-code.github.io/INSAFEI/</p>
+<a href="https://wa.me/527227399575" target="_blank">
+7227399575
+</a>
+</div>
 
-<div class="redes">
-
-<a href="#">
+<div class="red-social">
 <i class="fab fa-tiktok"></i>
-</a>
 
-<a href="#">
+<a href="https://www.tiktok.com/@INSAFEI" target="_blank">
+@INSAFEI
+</a>
+</div>
+
+<div class="red-social">
 <i class="fab fa-x-twitter"></i>
-</a>
 
-<a href="#">
-<i class="fab fa-facebook"></i>
+<a href="https://x.com/insafei_co" target="_blank">
+@insafei.co
 </a>
+</div>
+
+<div class="red-social">
+<i class="fab fa-facebook"></i>
+
+<a href="#" target="_blank">
+INSAFEI
+</a>
+</div>
+
+<div class="red-social">
+<i class="fas fa-envelope"></i>
+
+<a href="mailto:insafeiserviciosgmail.com">
+insafeiserviciosgmail.com
+</a>
+</div>
+
+<div class="red-social">
+<i class="fas fa-globe"></i>
+
+<a href="https://consultoriainsafei-code.github.io/INSAFEI/" target="_blank">
+Sitio Web Oficial
+</a>
+</div>
 
 </div>
 
-<p style="margin-top:25px;">
-TikTok: @INSAFEI
-</p>
-
-<p>
-X: @insafei.co
-</p>
-
-<p>
-Facebook: INSAFEI
+<p style="margin-top:40px;">
+Contáctanos para recibir una cotización personalizada adaptada
+a las necesidades de tu institución.
 </p>
 
 </section>
